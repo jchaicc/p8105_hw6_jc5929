@@ -141,6 +141,10 @@ cv_df %>%
     names_prefix = "rmse_"
   ) %>% 
   ggplot(aes(x = model, y = rmse)) +
-  geom_violin()
+  geom_violin()+labs(
+    title = "RMSE among 3 models",
+    x = "Model Type",
+    y = "RMSE"
+    ) 
 
 ```
