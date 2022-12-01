@@ -1,6 +1,6 @@
 ---
 title: "p8105_hw6_jc5929"
-output: html_document
+output: github_document
 date: "2022-11-30"
 ---
 
@@ -104,8 +104,8 @@ bw_df %>%
 ```
 
 ```{r}
-model_2 = lm(bwt ~ gaweeks + blength, data = birthweight_df)
-model_3 = lm(bwt ~ bhead + blength + babysex + bhead * blength + bhead * babysex + blength * babysex + bhead * blength * babysex, data = birthweight_df)
+model_2 = lm(bwt ~ gaweeks + blength, data = bw_df)
+model_3 = lm(bwt ~ bhead + blength + babysex + bhead * blength + bhead * babysex + blength * babysex + bhead * blength * babysex, data = bw_df)
 ```
 
 ```{r}
