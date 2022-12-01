@@ -87,7 +87,7 @@ bw_df= read_csv("data/birthweight.csv") %>%
 ```
 
 ```{r}
-model_fit_1 = lm(bwt ~ gaweeks + momage + mrace + malform + parity + fincome + pnumlbw, data = bw_df)
+model_fit_1 = lm(bwt ~ gaweeks + momage + mrace + fincome + pnumlbw, data = bw_df)
 
 bw_df %>% 
   modelr::add_residuals(model_fit_1) %>%
