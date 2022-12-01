@@ -104,6 +104,7 @@ bw_df %>%
 
 ```
 Based on the residual plot, the residual did not randomly distributed along the x axis, instead most of the points clustered together when predictied values are around 2750 ~ 3500. This further means that this model did not fitted that well, we need to look more models that can fit the data better.
+
 ```{r}
 model_2 = lm(bwt ~ gaweeks + blength, data = bw_df)
 model_3 = lm(bwt ~ bhead + blength + babysex + bhead * blength + bhead * babysex + blength * babysex + bhead * blength * babysex, data = bw_df)
@@ -149,3 +150,5 @@ cv_df %>%
     ) 
 
 ```
+
+From this rmse plot, model 3 is the best model as it has the lowest rmse. The best model among these three candidates is to use head circumference, length, sex, and all interactions to predict baby’s birthweight.
