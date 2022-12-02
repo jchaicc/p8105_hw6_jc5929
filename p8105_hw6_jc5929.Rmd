@@ -58,6 +58,7 @@ city_data=hom_df %>%
     CI_upper = exp(estimate + 1.96 * std.error)
   ) %>% 
   select(city_state,term, OR, starts_with("CI")) 
+
 ```
 
 ```{r}
@@ -72,6 +73,7 @@ city_data=hom_df %>%
     title = "Estimated ORs by City")
   
 ```
+Most cities have an odds ratio lower than 1, indicating lower odds of solving the homicide for male victims as compared to female victims, there is a statistically significant association between the victim being male and the likelihood of the homicide to go unsolved vs. the victim being female. Albuquerque, NM have the strongest association between victim sex and solving the homicide after controlling for victim age and race, while New York NY has the least. 
 
 ## Problem 3
 
