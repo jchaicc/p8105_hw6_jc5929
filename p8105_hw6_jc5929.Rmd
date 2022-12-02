@@ -127,7 +127,7 @@ cv_df =
 cv_df = 
   cv_df %>% 
   mutate(
-   model_fit_1 = map(.x = train, ~lm(bwt ~ gaweeks + momage + mrace + malform + parity + fincome + pnumlbw, data = .x)),
+   model_fit_1 = map(.x = train, ~lm(bwt ~ gaweeks + momage + mrace + fincome + pnumlbw, data = .x)),
    model_2 = map(.x = train, ~lm(bwt ~ gaweeks + blength, data = .x)),
    model_3 = map(.x = train, ~lm(bwt ~ bhead + blength + babysex + bhead * blength + bhead * babysex + blength * babysex + bhead * blength * babysex, data = .x))
   ) %>% 
