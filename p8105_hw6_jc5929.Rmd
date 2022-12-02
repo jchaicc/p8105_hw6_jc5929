@@ -73,6 +73,8 @@ city_data=hom_df %>%
     title = "Estimated ORs by City")
   
 ```
+
+
 Most cities have an odds ratio lower than 1, indicating lower odds of solving the homicide for male victims as compared to female victims, there is a statistically significant association between the victim being male and the likelihood of the homicide to go unsolved vs. the victim being female. Albuquerque, NM have the strongest association between victim sex and solving the homicide after controlling for victim age and race, while New York NY has the least. 
 
 ## Problem 3
@@ -105,6 +107,8 @@ bw_df %>%
   theme(plot.title = element_text(hjust = 0.5))
 
 ```
+
+
 Based on the residual plot, the residual did not randomly distributed along the x axis, instead most of the points clustered together when predictied values are around 2750 ~ 3500. This further means that this model did not fitted that well, we need to look more models that can fit the data better.
 
 ```{r}
